@@ -5,14 +5,17 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+ 
   plugins: [
     tailwindcss(),
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
+      
       },
     }),
   ],
+   base:'/testreactpage-',
   resolve:{
     alias: {
       '@': path.resolve(__dirname, 'src'),
